@@ -11,12 +11,14 @@ export default {
     entry: path.resolve(__dirname, './src/index'),
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
     },
+    devtool: 'inline-source-map',
     devServer: {
         static: './dist',
         port: 3000,
         hot: true,
+        historyApiFallback: true,
     },
     plugins: [
         new htmlWebpackPlugin({
@@ -26,9 +28,16 @@ export default {
     ],
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        alias: {
+            "@src": path.resolve(__dirname, './src/')
+        }
     },
     module: {
         rules: [
+            {
+                test: /\.(css)$/,
+                use: ['style-loader', 'css-loader']
+            },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_componenst)/,
