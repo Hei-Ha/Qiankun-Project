@@ -1,6 +1,6 @@
 import React from 'react'
 const App = () => {
-    return <div>123ooo123</div>
+    return <div>MicroApp1-react</div>
 }
 
 export default App

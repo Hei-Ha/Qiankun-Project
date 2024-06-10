@@ -1,6 +1,6 @@
 import React from 'react'
 const App = () => {
-    return <div>123ooo123</div>
+    return <div>Main app</div>
 }
 
 export default App

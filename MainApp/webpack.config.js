@@ -22,7 +22,7 @@ export default {
     },
     plugins: [
         new htmlWebpackPlugin({
-            title: 'QianKun',
+            title: 'QianKun-Main',
             template: path.resolve(__dirname, './index.html')
         }),
     ],
