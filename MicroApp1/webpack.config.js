@@ -12,13 +12,22 @@ export default {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        library: 'MicroApp1',
+        libraryTarget: 'umd',
+        chunkLoadingGlobal: `webpackJsonp_MicroApp1`,
+        globalObject: 'window',
     },
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',
         port: 3001,
-        hot: true,
+        hot: false,
         historyApiFallback: true,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
+        // watchContentBase: false,
+        liveReload: false,
     },
     plugins: [
         new htmlWebpackPlugin({

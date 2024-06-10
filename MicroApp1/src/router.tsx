@@ -17,7 +17,11 @@ const router = createBrowserRouter([
     {
         path: '/text2',
         element: <Text2 />
-    }
+    },
+    {
+        path: 'react',
+        element: <App />
+    },
 ])
 
 export default router
