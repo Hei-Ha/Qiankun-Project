@@ -3,7 +3,6 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "@src/App";
 import Text1 from '@src/components/Text1'
 import Text2 from '@src/components/Text2'
-import MicroApp1 from "@src/components/MicroApp1";
 
 
 const router = createBrowserRouter([
@@ -21,8 +20,8 @@ const router = createBrowserRouter([
     },
     {
         path: 'react',
-        element: <MicroApp1 />
-    }
+        element: <App />
+    },
 ])
 
 export default router

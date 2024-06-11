@@ -1,9 +1,9 @@
 {
-  "name": "Qiankun-Project",
+  "name": "MicroApp1",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "start": "webpack server"
   },
@@ -26,7 +26,6 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
-    "qiankun": "^2.10.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1"

@@ -12,17 +12,26 @@ export default {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        library: 'MicroApp1',
+        libraryTarget: 'umd',
+        chunkLoadingGlobal: `webpackJsonp_MicroApp1`,
+        globalObject: 'window',
     },
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',
-        port: 3000,
-        hot: true,
+        port: 3001,
+        hot: false,
         historyApiFallback: true,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
+        // watchContentBase: false,
+        liveReload: false,
     },
     plugins: [
         new htmlWebpackPlugin({
-            title: 'QianKun-Main',
+            title: 'MicroApp1',
             template: path.resolve(__dirname, './index.html')
         }),
     ],
